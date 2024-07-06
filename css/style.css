@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+   
+:root{
+    --main-bg-color:#2B6435;
+    --second-bg-color:#9FC6B3;
+    --bg-color: #C2E4D3;
+    --bg2-color:#F0F8F2;
+    --main-text-color:#2B6435;
+    --second-text-color:#F0F8F2;
+    --another-color: rgb(243, 35, 132);
+}
+.primary-text{
+    color: var(--main-text-color) !important;
+}
+.second-text{
+    color: var(--second-text-color) !important;
+}
+.primary-bg{
+    background-color: var(--main-bg-color) !important;
+}
+.secondary-bg{
+    background-color: var(--second-bg-color) !important;
+}
+.light-bg{
+    background-color:var(--second-bg-color);
+}
+
+
+
+/* ------------------ sidebar start ----------------  */
+.logo-img img{
+    width: 40px !important;
+}
+#overallDasboard{
+    overflow-x: hidden !important; 
+    overflow-y: hidden !important;
+    background: #C2E4D3 !important;
+}
+#mainDasboard{
+    min-width:100vw !important;
+    height: 100vh;
+}
+#sidebarDasboard{
+    height: 100vh;
+    margin-left: -230px;
+    transition: margin .5s ease-out !important;
+}
+
+#sidebarDasboard > .list-group{
+    width: 230px !important;
+}
+
+#overallDasboard.toggled #sidebarDasboard{
+    margin-left: 0 !important;
+}
+
+#sidebarDasboard > .sidebar-heading{
+    padding: 18px 20px !important;
+    font-size: 20px !important;
+}
+
+/* ------------scroll bars---------- */
+.details_area{
+    height: 90vh;
+    overflow-y:scroll !important;
+}
+.details_area::-webkit-scrollbar {
+    display: none;
+}
+/* ------------scroll bars end---------- */
+
+.list-group-item{
+    border: none !important;
+    padding: 15px 30px !important;
+    transition: .2s;
+}
+
+.list-group-item:hover, .list-group-item.active{
+    color: var(--second-text-color) !important; 
+    background-color: var(--main-text-color) !important;
+}
+/* ------------------------------------------------------------------------- */
+/* dasboard and common table */
+thead tr th,tbody tr th,tbody tr td {
+    color: var(--main-text-color) !important;
+}
+
+/* product and common table */
+.product_img {
+    border: 2px solid var(--main-text-color) !important;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 1px var(--main-bg-color) !important;
+}
+
+/* -------------------------------------- View details ---------------------------*/
+    
+.card {
+    box-shadow: 0 0 5px 0px #000000;
+    border-radius: 35px !important;
+    border: none !important;
+    width: 18rem !important;
+}
+
+.card-top {
+    height: 300px !important;
+    border-radius: 35px 35px 0 35px !important;
+    background-color: var(--main-bg-color);
+    overflow: hidden;
+}
+
+.card_heart {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 20px;
+    border-radius: 0 35px 0 35px !important;
+    color: var(--main-text-color);
+    background-color: var(--second-text-color);
+    cursor: pointer;
+}
+
+.card-top img {
+    height: 100% !important;
+    object-fit: contain !important;
+}
+
+.card-title {
+    font-size: 20px !important;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.prices>p {
+    margin-bottom: 0 !important;
+    pointer-events: none;
+}
+
+.price {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.old_price {
+    font-size: 14px;
+}
+
+.fa-share-nodes {
+    padding: 10px;
+    background-color: var(--main-bg-color);
+    color: var(--second-text-color);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.buy {
+    color: var(--main-text-color) !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+}
+
+.card-btn {
+    background-color: var(--main-bg-color) !important;
+    color: var(--second-text-color) !important;
+    border-radius: 35px 0 35px 0 !important;
+}
+
+/* -------------------------------------- View details ---------------------------*/
+/* -----------------------Create file control ------------------------------------------------------------------ */
+
+form{
+    border-radius: 5px;
+    background-color: #fff;
+    width: 350px;
+}
+form > div .text_area{
+    color: var(--main-text-color);
+    outline: none !important;
+    padding: 5px; 
+    width:100% ;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    border: 1px solid var(--main-text-color)!important;
+}
+form > div > label{
+    color: var(--main-bg-color);
+    font-size: 18px;
+    font-weight: 500;
+    padding-bottom: 5px ;
+}
+.upload_img{
+    color: var(--main-text-color) !important; 
+    box-shadow: none !important;
+    border: 1px solid var(--main-text-color)!important;
+
+}
+.submit_btn{
+    outline: none !important;
+    border: 1px solid var(--main-bg-color) !important;
+    background-color: var(--main-bg-color) !important;
+}
+/* -----------------------Create file control end------------------------------------------------------------------- */
+/* ------------scroll bars---------- */
+
+
+
+
+
+@media (min-width:768px){
+    #sidebarDasboard{
+        margin-left: 0 !important;
+    }
+
+    #mainDasboard{
+        min-width: 0 !important;
+        width: 100% !important;
+    }
+    
+    #overallDasboard.toggled #sidebarDasboard{
+        margin-left: -230px !important;
+    }
+}
+@media (max-width:425px){
+.card {
+    width: 15rem !important;
+}
+
+.card-top {
+    height: 250px !important;
+}
+/* .edit-form{
+    width: 300px;
+    height: 300px;
+
+} */
+}
