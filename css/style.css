@@ -69,7 +69,9 @@ html{
     padding: 18px 20px !important;
     font-size: 20px !important;
 }
-
+.fa-align-left{
+    coursor:pointer;
+}
 /* ------------scroll bars---------- */
 .details_area{
     height: 90vh;
