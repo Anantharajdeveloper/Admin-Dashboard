@@ -69,8 +69,9 @@ html{
     padding: 18px 20px !important;
     font-size: 20px !important;
 }
+
 .fa-align-left{
-    coursor:pointer;
+    cursor: pointer;
 }
 /* ------------scroll bars---------- */
 .details_area{
@@ -240,9 +241,5 @@ form > div > label{
 .card-top {
     height: 250px !important;
 }
-/* .edit-form{
-    width: 300px;
-    height: 300px;
 
-} */
 }
