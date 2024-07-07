@@ -5,47 +5,52 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    outline: none;
+    transition: .2s linear;
 }
 html{
     scroll-behavior: smooth;
 }
+:root {
+    --main-color: #eb4d09;
 
-   
-:root{
-    --main-bg-color:#2B6435;
-    --second-bg-color:#9FC6B3;
-    --bg-color: #C2E4D3;
-    --bg2-color:#F0F8F2;
-    --main-text-color:#2B6435;
-    --second-text-color:#F0F8F2;
-    --another-color: rgb(243, 35, 132);
+    --bg-color: #fff;
+
+    --secound-bg-color: #0d4930;
+
+    --text-color: #fff;
+
+    --secound-text-color: #0d4930;
+
+    --another-color:#f0ccbc;
 }
+
 .primary-text{
-    color: var(--main-text-color) !important;
+    color: var(--text-color) !important;
 }
 .second-text{
-    color: var(--second-text-color) !important;
+    color: var(--secound-text-color) !important;
 }
 .primary-bg{
-    background-color: var(--main-bg-color) !important;
+    background-color: var(--bg-color) !important;
 }
 .secondary-bg{
-    background-color: var(--second-bg-color) !important;
+    background-color: var(--secound-bg-color) !important;
 }
-.light-bg{
-    background-color:var(--second-bg-color);
+.main-bg{
+    background-color: var(--main-color) !important;
 }
-
+.main-color{
+    color: var(--main-color) !important;
+}
 
 
 /* ------------------ sidebar start ----------------  */
-.logo-img img{
-    width: 40px !important;
-}
+
 #overallDasboard{
     overflow-x: hidden !important; 
     overflow-y: hidden !important;
-    background: #C2E4D3 !important;
+    /* background: #ffffff !important; */
 }
 #mainDasboard{
     min-width:100vw !important;
@@ -69,6 +74,9 @@ html{
     padding: 18px 20px !important;
     font-size: 20px !important;
 }
+.span-color{
+    color: var(--main-color);
+}
 
 .fa-align-left{
     cursor: pointer;
@@ -77,33 +85,50 @@ html{
 .details_area{
     height: 90vh;
     overflow-y:scroll !important;
+    overflow-x:scroll !important;
 }
-.details_area::-webkit-scrollbar {
-    display: none;
+.details_area::-webkit-scrollbar{
+    width: 5px;   
 }
+.details_area::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+    border-radius: 3px;
+}
+
 /* ------------scroll bars end---------- */
 
 .list-group-item{
     border: none !important;
+    border-right:4px solid transparent  !important;
+    border-left:4px solid transparent  !important;
     padding: 15px 30px !important;
     transition: .2s;
 }
 
 .list-group-item:hover, .list-group-item.active{
-    color: var(--second-text-color) !important; 
-    background-color: var(--main-text-color) !important;
+    border-right:4px solid var(--main-color) !important;
+    border-left:4px solid  var(--main-color) !important;
+    color: var(--main-color) !important; 
+    background-color: var(--another-color) !important;
 }
+.user-admin{
+    color: var(--main-color);
+}
+
 /* ------------------------------------------------------------------------- */
 /* dasboard and common table */
+
 thead tr th,tbody tr th,tbody tr td {
-    color: var(--main-text-color) !important;
+    color: var(--secound-text-color) !important;
+    border-color:#0d4930 !important;
+    border-top:1px solid #0d4930 !important;
 }
 
 /* product and common table */
 .product_img {
-    border: 2px solid var(--main-text-color) !important;
+    border: 1px solid var(--main-color) !important;
     border-radius: 5px;
-    box-shadow: 0 0 10px 1px var(--main-bg-color) !important;
+    box-shadow: 0 0 8px 1px var(--main-color) !important;
 }
 
 /* -------------------------------------- View details ---------------------------*/
@@ -112,13 +137,13 @@ thead tr th,tbody tr th,tbody tr td {
     box-shadow: 0 0 5px 0px #000000;
     border-radius: 35px !important;
     border: none !important;
-    width: 18rem !important;
+    width: 17rem !important;
 }
 
 .card-top {
-    height: 300px !important;
+    height: 250px !important;
     border-radius: 35px 35px 0 35px !important;
-    background-color: var(--main-bg-color);
+    background-color: var(--secound-bg-color);
     overflow: hidden;
 }
 
@@ -128,9 +153,12 @@ thead tr th,tbody tr th,tbody tr td {
     right: 0;
     font-size: 20px;
     border-radius: 0 35px 0 35px !important;
-    color: var(--main-text-color);
-    background-color: var(--second-text-color);
+    color: var(--secound-text-color);
+    background-color: var(--bg-color);
     cursor: pointer;
+}
+.card_heart:hover{
+    color: var(--main-color);
 }
 
 .card-top img {
@@ -160,63 +188,72 @@ thead tr th,tbody tr th,tbody tr td {
 
 .fa-share-nodes {
     padding: 10px;
-    background-color: var(--main-bg-color);
-    color: var(--second-text-color);
+    background-color: var(--secound-bg-color);
+    color: var(--text-color);
     border-radius: 50%;
     cursor: pointer;
 }
+.fa-share-nodes:hover{
+    background-color: var(--main-color);
+}
 
 .buy {
-    color: var(--main-text-color) !important;
+    color: var(--secound-text-color) !important;
     font-size: 16px !important;
     font-weight: 600 !important;
 }
 
 .card-btn {
-    background-color: var(--main-bg-color) !important;
-    color: var(--second-text-color) !important;
+    background-color: var(--secound-bg-color) !important;
+    color: var(--text-color) !important;
     border-radius: 35px 0 35px 0 !important;
 }
 
 /* -------------------------------------- View details ---------------------------*/
-/* -----------------------Create file control ------------------------------------------------------------------ */
+/* ------------------------------- Create file control ----------------------------------- */
 
 form{
-    border-radius: 5px;
-    background-color: #fff;
+    border-radius: 10px !important;
+    background-color: var(--another-color);
     width: 350px;
+    box-shadow: 0px 0px 5px 0px var(--secound-bg-color);
 }
 form > div .text_area{
-    color: var(--main-text-color);
+    color: var(--secound-text-color);
     outline: none !important;
     padding: 5px; 
     width:100% ;
     border-radius: 5px;
     margin-bottom: 5px;
-    border: 1px solid var(--main-text-color)!important;
+    border: 1px solid var(--secound-text-color)!important;
 }
 form > div > label{
-    color: var(--main-bg-color);
+    color: var(--secound-text-color);
     font-size: 18px;
     font-weight: 500;
-    padding-bottom: 5px ;
+    padding-bottom: 5px;
 }
 .upload_img{
-    color: var(--main-text-color) !important; 
+    color: var(--secound-text-color) !important; 
     box-shadow: none !important;
-    border: 1px solid var(--main-text-color)!important;
+    border: 1px solid var(--secound-bg-color)!important;
 
 }
 .submit_btn{
+    color: var(--text-color);
+    width: 100%;
+    border-radius: 5rem !important;
+    border-top-left-radius: 0 !important;
     outline: none !important;
-    border: 1px solid var(--main-bg-color) !important;
-    background-color: var(--main-bg-color) !important;
+    border: 1px solid var(--secound-bg-color) !important;
+    background-color: var(--secound-bg-color) !important;
+}
+.submit_btn:hover{
+    background-color: var(--main-color) !important;
+    border: 1px solid var(--main-color) !important;
 }
 /* -----------------------Create file control end------------------------------------------------------------------- */
 /* ------------scroll bars---------- */
-
-
-
 
 
 @media (min-width:768px){
@@ -233,6 +270,7 @@ form > div > label{
         margin-left: -230px !important;
     }
 }
+
 @media (max-width:425px){
 .card {
     width: 15rem !important;
